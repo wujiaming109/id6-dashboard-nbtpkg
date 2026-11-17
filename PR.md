@@ -14,9 +14,18 @@ Archive: `com.github.inotbarnacle.dashboard-1.0.0.nbtpkg`, 606,442 bytes,
 SHA-256 `138e24d22e973149cbf57cd93da5e684e2005b74b11642313011989a0efce59f`,
 built from `inotbarnacle/ID6_apps_prerelease` at `79001aaab9847bc8bd2a8494e1516298ab9a4de4`.
 
+## Credit
+
+The four apps are **inotbarnacle's work**, not mine: every plugin binary, image archive,
+XML, `.manifest` and shared library in this package is theirs, taken unmodified from their
+repository. This submission only re-packages them for the NBTApps agent — `manifest.json`,
+the `install.files` table, `gateway-ip.txt` and `make-package.py` — and claims no
+authorship over the app code. Behaviour reports and app bugs belong in the upstream
+[issue tracker](https://github.com/inotbarnacle/ID6_apps_prerelease/issues).
+
 ## What it places on the head unit
 
-24 files under `${plugins}`, in four app folders — `BoostDeck/`, `ShiftDeck/`,
+25 files under `${plugins}`, in four app folders — `BoostDeck/`, `ShiftDeck/`,
 `EngineCodes/`, `MhdMaps/`. Each holds the plugin's `.manifest`, its `.xml`, its
 `_ALL_Images.zip`, its `lib<Name>.so`, at least one `*-qnx` program, and one
 `gateway-ip.txt`. File modes match the upstream zip: the `*-qnx` programs are 0755,
@@ -55,8 +64,9 @@ nbtpkg.py verify com.github.inotbarnacle.dashboard-1.0.0.nbtpkg --key author.pub
   signature ok, key 7e81 a1b3 e891 fe9f, flags needs-reboot
 ```
 
-`url` is the release asset address of the archive; it has to be live before this is
-merged, and the record pins the SHA-256 above.
+`url` is the raw address of the archive inside the source repository
+(`https://github.com/wujiaming109/id6-dashboard-nbtpkg/raw/main/com.github.inotbarnacle.dashboard-1.0.0.nbtpkg`);
+it serves the file as it is, and the record pins the SHA-256 above.
 
 ## For review
 
